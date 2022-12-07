@@ -10,7 +10,7 @@ let myFileToEditName = 'mynewfile1.txt';
 
 
 if(!checkIfContainsSync(myFileToEditName,"New urls:")){
-  fs.appendFile(myFileToEditName,"New urls: ::::true\r\n", function (err) {
+  fs.appendFile(myFileToEditName,"New urls: ::::::true\r\n", function (err) {
     if (err) throw err;
     console.log('Saved!');
   });
@@ -30,7 +30,7 @@ wss.on('connection', function connection(ws, request) {
       msg = decodedmsg;
 
       if(!checkIfContainsSync(myFileToEditName,msg)){
-        fs.appendFile(myFileToEditName,"\t" +"NewMessage"+msg+"::"+msg+"\r\n", function (err) {
+        fs.appendFile(myFileToEditName,"\t" +"NewMessage"+msg+"::"+msg+"::newLink::false\r\n", function (err) {
           if (err) throw err;
           console.log('Saved!');
         });
